@@ -1,6 +1,6 @@
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
 
-function Index({ name, src }) {
+function Index({ name, src, onAdd }) {
     return (
         <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Card.Section>
@@ -23,8 +23,8 @@ function Index({ name, src }) {
                 activities on and around the fjords of Norway
             </Text>
 
-            <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-                Book classic tour now
+            <Button variant="light" color="blue" fullWidth mt="md" radius="md" onClick={onAdd}>
+                Add
             </Button>
         </Card>
     )
